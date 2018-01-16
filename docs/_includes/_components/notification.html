@@ -1,0 +1,71 @@
+<article class="component active" id='notification' data-url="notification">
+  <h2 class="component-title">通知</h2>
+  <p class="component-description">这是一个类似iOS的通知，您可以设置图标、标题和文本，你可以也将关闭通知。</p>
+  
+{% highlight js %}
+$.notification({
+  title: "Baby",
+  text: "I miss you",
+  media: "<img src='...'>",
+  data: "123",
+  onClick: function(data) {
+    $.alert("Click" + data);
+  },
+  onClose: function(data) {
+    $.alert("Close "+data);
+  }
+});
+
+//关闭通知
+$.closeNotification();
+
+{% endhighlight %}
+  
+  <p>只能显示一个通知, 如果有新通知出现将会替换旧通知</p>
+
+
+  <h3>参数配置</h3>
+
+  <table>
+    <tr>
+      <th>参数</th>
+      <th>默认</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>undefined</td>
+      <td>Title of notification</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>undefined</td>
+      <td>Text of notification</td>
+    </tr>
+    <tr>
+      <td>media</td>
+      <td>undefined</td>
+      <td>Media of notification. It should be a icon with image or iconfont.</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td>undefined</td>
+      <td>This data will be the param of onClick and onClose function.</td>
+    </tr>
+    <tr>
+      <td>onClick</td>
+      <td>undefined</td>
+      <td>Callback when user click.</td>
+    </tr>
+    <tr>
+      <td>onClose</td>
+      <td>undefined</td>
+      <td>Callback when notification is closed.</td>
+    </tr>
+    <tr>
+      <td>time</td>
+      <td>4000</td>
+      <td>The duration of notification.</td>
+    </tr>
+  </table>
+</article>

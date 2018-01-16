@@ -1,0 +1,84 @@
+---
+layout: default
+title: 开始
+---
+
+<div class="docs-sub-header">
+  {% include masthead.html %}
+  <div class="container">
+    <div class="docs-sub-content">
+      <h2 class="page-title">开始使用</h2>
+      <p class="page-description">只需要如下几个简单的步骤，就可以在你的应用中使用 F7 了.</p>
+    </div>
+    {% include ad.html %}
+  </div>
+</div>
+
+<div class="container">
+  <div class="column-group">
+    <div class="column docs-content">
+      <div class="docs-section">
+        <h2>创建页面</h2>
+        <p class="lead"></p>
+        <h3>1. 下载</h3>
+        <p><a href="http://172.18.1.8/R&D/F7/f7.zip">点击下载资源包</a></p>
+        <h3>2. 引入静态文件</h3>
+{% highlight html %}
+<link rel="stylesheet" href="css/f7.min.css">
+<script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/f7.min.js" charset="utf-8"></script>
+<!--Mybe you will use extends components-->
+<link rel="stylesheet" href="css/f7-swiper.min.css">
+<script type="text/javascript" src="js/f7-swiper.min.js" charset="utf-8"></script>
+{% endhighlight %}
+
+
+        <h3>3. 调试代码</h3>
+        <p>如果你希望在开发环境下可以调试代码，那么你可以这样引用未压缩的版本。只要把上面的对应文件名中的 `.min` 去掉就可以</p>
+
+        <h3>4. 完整的页面模板</h3>
+        <p>你可以直接用下面的模板来创建你的页面：</p>
+
+{% highlight html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的页面</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/f7.min.css">
+    <link rel="stylesheet" href="css/f7-swiper.min.css">
+
+    <!-- 我的 css 文件 -->
+    <link rel="stylesheet" href="/my-css-file.css">
+  </head>
+  <body>
+    <!-- 我的 html 代码 -->
+    <!-------------------->
+    <!-------------------->
+    <!-------------------->
+    <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/f7.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/f7-swiper.min.js" charset="utf-8"></script>
+
+    <!-- 我的 js 文件 -->
+    <script src="/my-js-file.js"></script>
+  </body>
+</html>
+{% endhighlight %}
+
+        <p>示例 <a href="/examples/getting-started/" target="_blank" data-ignore="push">demo</a></p>
+        <p>这里只是一个很简单的例子，并不具有实用价值，建议再看一看 <a href="/demos" target="_blank">Examples</a> 中的例子，案例中的例子更加复杂并且具备一个简单app的功能。</p>
+      </div>
+  </div>
+
+  <div class="column">
+    <!-- Footer -->
+    {% include footer.html %}
+  </div>
+</div>
