@@ -119,12 +119,12 @@ $("#picker-name").picker({
 
   <h3 class="component-title">picker方法</h3>
 
-  <p class="component-description">你可以通过 <code>$(".picker").picker("method", args1, args2...)</code> 的方式来调用相关的方法。</p>
+  <p class="component-description">你可以通过 <code>$('.picker').picker('method', args1, args2...)</code> 的方式来调用相关的方法。</p>
 
 {% highlight js %}
-$("#picker-name").picker("open");
-$("#picker-name").picker("close");
-$("#picker-name").picker("setValue", ["2017", "12", "12"]);
+$('#picker-name').picker('open');
+$('#picker-name').picker('close');
+$('#picker-name').picker('setValue', ['2017', '12', '12']);
 {% endhighlight %}
 
   <p>所有可用方法如下：</p>
@@ -164,7 +164,7 @@ $("#picker-name").picker("setValue", ["2017", "12", "12"]);
 {% highlight html %}
 <input type="text" id="datetime-picker" value="2016-12-12 13:20"/>
 <script>
-  $("#datetime-picker").datetimePicker();
+  $('#datetime-picker').datetimePicker();
 </script>
 {% endhighlight %}
 
