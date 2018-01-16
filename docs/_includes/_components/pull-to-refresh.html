@@ -6,7 +6,7 @@
 
   <div class="component-example component-example-fullbleed">
       <header class="bar bar-nav">
-          <h1 class='title'>Pull to refresh</h1>
+          <h1 class="title">Pull to refresh</h1>
       </header>
       <div class="content pull-to-refresh-content" data-ptr-distance="55">
           <div class="pull-to-refresh-layer">
@@ -26,7 +26,7 @@
 
 {% highlight html %}
 <header class="bar bar-nav">
-  <h1 class='title'>Pull to refresh</h1>
+  <h1 class="title">Pull to refresh</h1>
 </header>
 <div class="content pull-to-refresh-content" data-ptr-distance="55">
   <div class="pull-to-refresh-layer">
@@ -46,39 +46,39 @@
 
 <script type="text/javascript">
 $(document).on('refresh', '.pull-to-refresh-content',function(e) {
-    setTimeout(function() {
-        var cardHTML = '<div class="card">' +
-                          '<div class="card-header">New Card</div>' +
-                          '<div class="card-content">' +
-                            '<div class="card-content-inner">' +
-                                'Hello! I am the new card!'+(Math.random()*1000000)+
-                            '</div>' +
-                          '</div>' +
-                      '</div>';
+  setTimeout(function() {
+    var cardHTML = '<div class="card">' +
+                      '<div class="card-header">New Card</div>' +
+                      '<div class="card-content">' +
+                        '<div class="card-content-inner">' +
+                            'Hello! I am the new card!'+(Math.random()*1000000)+
+                        '</div>' +
+                      '</div>' +
+                    '</div>';
 
-        $(e.target).find('.card').replaceWith(cardHTML);
-        // done!
-        $.pullToRefreshDone('.pull-to-refresh-content');
-    }, 2000);
+    $(e.target).find('.card').replaceWith(cardHTML);
+    // done!
+    $.pullToRefreshDone('.pull-to-refresh-content');
+  }, 2000);
 });
 </script>
 <p class="component-description">javascript:</p>
 {% highlight js %}
 $(document).on('refresh', '.pull-to-refresh-content',function(e) {
-    setTimeout(function() {
-        var cardHTML = '<div class="card">' +
-                          '<div class="card-header">New Card</div>' +
-                          '<div class="card-content">' +
-                            '<div class="card-content-inner">' +
-                                'Hello! I am the new card!'+(Math.random()*1000000)+
-                            '</div>' +
-                          '</div>' +
-                      '</div>';
+  setTimeout(function() {
+    var cardHTML = '<div class="card">' +
+                      '<div class="card-header">New Card</div>' +
+                      '<div class="card-content">' +
+                        '<div class="card-content-inner">' +
+                            'Hello! I am the new card!'+(Math.random()*1000000)+
+                        '</div>' +
+                      '</div>' +
+                   '</div>';
 
-        $(e.target).find('.card').replaceWith(cardHTML);
-        // done
-        $.pullToRefreshDone('.pull-to-refresh-content');
-    }, 2000);
+    $(e.target).find('.card').replaceWith(cardHTML);
+    // done
+    $.pullToRefreshDone('.pull-to-refresh-content');
+  }, 2000);
 });
 {% endhighlight %}
 

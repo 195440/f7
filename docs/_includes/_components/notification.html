@@ -4,15 +4,15 @@
   
 {% highlight js %}
 $.notification({
-  title: "Baby",
-  text: "I miss you",
-  media: "<img src='...'>",
-  data: "123",
+  title: 'Baby',
+  text: 'I miss you',
+  media: '<img src='...'>',
+  data: '123',
   onClick: function(data) {
-    $.alert("Click" + data);
+    $.alert('Click' + data);
   },
   onClose: function(data) {
-    $.alert("Close "+data);
+    $.alert('Close '+data);
   }
 });
 
