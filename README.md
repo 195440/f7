@@ -1,8 +1,8 @@
-<div class="entry-content" itemprop="articleBody">
+# 本例基于 Jekyll 搭建
 
 # 简介
 
-Jekyll 是用 Ruby 开发的静态网站框架，十分流行。本教程详细讲述了在 CentOS 6.x 上安装 Jekyll 的过程。
+ Jekyll  是用 Ruby 开发的静态网站框架，十分流行。本教程详细讲述了在 CentOS 6.x 上安装 Jekyll 的过程。
 
 # 安装 Ruby
 
@@ -53,4 +53,3 @@ gem sources -a http:<span class="hljs-comment"><span class="hljs-comment">//mirr
 然后在浏览器中打开 http://IP:4000，即可看到 Jekyll 默认页面。
 
 
-</div>
