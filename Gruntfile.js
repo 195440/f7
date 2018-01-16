@@ -181,7 +181,17 @@ module.exports = function(grunt) {
                     '**/*'
                 ],
                 dest: '<%= meta.docsDistPath %>'
-            }
+            },
+            fonts: {
+                expand: true,
+                src: 'fonts/*',
+                dest: '<%= meta.distPath %>'
+            },
+            docsfonts: {
+                expand: true,
+                src: 'fonts/*',
+                dest: '<%= meta.docsDistPath %>'
+            },
         },
 
         autoprefixer: {
