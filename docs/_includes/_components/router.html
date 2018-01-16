@@ -1,27 +1,21 @@
 <article class="component" id='router' data-url="router">
-  <h2 class="component-title">Router</h2>
-  <p class="component-description">The Router is used load Ajax Page or Inline Page.</p>
-  <p>By default, the router will listen to all links click event, and use ajax to load new page instead of directly jump to the new page.</p>
-  <p>Add <code>class="external"</code> or <code>external</code> to a link if you don't want router to proxy it.</p>
-  <p>Set <code>$.config.router = false</code> to close router globally. It's recommend to use <code>pageInit</code> event to init the page, event if you closed the router.</p>
+  <h2 class="component-title">路由</h2>
+  <p class="component-description">路由支持在同一个html中内联多个页面，ajax加载新页面，前进和后退操作。</p>
+  <p>默认情况下，router 会自动拦截所有的链接点击事件，如果你希望一个链接通过浏览器原生跳转而不使用 router，你可以在连接上增加一个</p>
+  <p><code>class="external"</code> 或 <code>external</code> 也可设置 <code>$.config.router = false</code> 参数来全局关闭路由器, 参见 <a href="#init">初始化</a></p>
+  <p>即使关闭了路由器，也强烈建议通过 <code>pageInit</code> 事件来初始化页面，因为这样可以保证你随时可以打开路由器而不用修改任何JS代码。</p>
+  <p>默认情况下，加载新的页面会从右向左滑动，后退会从左向右滑动。如果你想关掉加载动画，只需要在链接上加上 <code>class="no-transition"</code></p>
 
-  <p>The new page will slide from right to left by default. Add <code>class="no-transition"</code> to link to prevent the animation.</p>
-
-  <p>There is a stack to manage the history, the new page will push to stack, you can add <code>class='replace'</code> to replace the stack instead of push.</p>
+  <!--<p>There is a stack to manage the history, the new page will push to stack, you can add <code>class='replace'</code> to replace the stack instead of push.</p>-->
 
   <h3 class="component-title">Inline Page</h3>
-  <p class="component-description">You can write multi page in one html file. Each page is in a <code>.page</code> container. If you have multi page in one html, you should use <code>.page-current</code> to make it a visiable at first enter.</p>
-  <p>Every <code>.page</code> container must have an id attr.Router will use id as the unique identify of a page. And you can use the id to jump to the page like this: <code>&lt;a href='#{page-id}'&gt;jump&lt;/a&gt;</code>. And if the new Page has the same id to a old page , the DOM of old page will be replace by new page.</p>
-
-  <h3 class="component-title">JS And CSS</h3>
-  <p>Router will ignore all scripts and styles when load new page! You should import all CSS file and JS file(pack them into one js and css file) in the entry page, And use 'pageInit' to load different page's JS code.</p>
-
-  <p>Because users may refresh the page, the subpage will broken if it don't import any CSS and JS. So, you can import all CSS and JS file in every page.</p>
+  <p class="component-description">你可以在一个html文件中编写多个页. 每个页应该在容器 <code>.page</code> 中. 如果当前存在多个页, 你可以使用 <code>.page-current</code> class 显示第一个页.</p>
+  <p>每个 <code>.page</code> 容器应该有一个唯一id。 你可使用此方法跳转路由页  <code>&lt;a href="#pageid"&gt;跳转&lt;/a&gt;</code>。 如果新页面与旧页面具有相同的id，则旧页面的DOM将被新页替换</p>
 
 {% highlight html %}
-<div class="page page-current" id='router'>
+<div class="page page-current" id="router">
   <header class="bar bar-nav">
-    <h1 class='title'>Router</h1>
+    <h1 class="title">Router</h1>
   </header>
   <div class="content">
     <div class="content-block">
@@ -33,32 +27,31 @@
   </div>
 </div>
 
-<div class="page" id='router3'>
+<div class="page" id="router3">
   <header class="bar bar-nav">
     <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
       <span class="icon icon-left"></span>
       Back
     </a>
-    <h1 class='title'>Router</h1>
+    <h1 class="title">Router</h1>
   </header>
   <div class="content">
     <div class="content-block">
-      This is an Inline Page，Click <a href="#" class='back'>Back </a> to go back。
+      This is an Inline Page，Click <a href="#" class="back">Back </a> to go back。
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-<p>Note that you can only write multi inline page in the entry html file. There can only be one <code>.page</code> in new page loaded by ajax.</p>
-
   <h3 class="component-title">Ajax Page</h3>
-  <p class="component-description">Router will prevent all links' click event, and load new page via Ajax by default.</p>
+  <p class="component-description">路由器将阻止所有链接的点击事件，并默认通过Ajax加载新页面。</p>
+  <p>在Ajax加载的新页面中只能有一个 <code>.page</code>。</p>
 
 {% highlight html %}
 <!-- page 1 -->
-<div class="page page-current" id='router'>
+<div class="page page-current" id="router">
   <header class="bar bar-nav">
-    <h1 class='title'>Router</h1>
+    <h1 class="title">Router</h1>
   </header>
   <div class="content">
     <div class="content-block">
@@ -72,13 +65,13 @@
 
 {% highlight html %}
 <!-- page 2 -->
-<div class="page" id='router2'>
+<div class="page" id="router2">
   <header class="bar bar-nav">
     <a class="button button-link button-nav pull-left back" href="/docs-demos/router">
       <span class="icon icon-left"></span>
       Back
     </a>
-    <h1 class='title'>Router</h1>
+    <h1 class="title">Router</h1>
   </header>
   <div class="content">
     <div class="content-block">
@@ -89,21 +82,21 @@
 {% endhighlight %}
 
   <h3 class="component-title">Go Back</h3>
-  <p>It's very easy to go back, what you need to do is only add a <code>.back</code> class on any link. In case of can't go back, you can set the <code>href</code> attr of the link, and router will load the href if it can't go back in history(For example, the user refreshed the page or enter the link directly)</p>
-  <p class="component-description">You can also call<code>$.router.back(url)</code> to go back. The url param is optional but recommend too.</p>
+  <p>返回使用 <code>&lt;a href="#" class="back"&gt;Back&lt;/a&gt;</code></p>
+  <p class="component-description">也可使用 <code>$.router.back(url)</code></p>
 
 {% highlight html %}
 <a class="button button-link button-nav pull-left back" href="/docs-demos/router">Back</a>
 {% endhighlight %}
 
   <h3 class="component-title">JS</h3>
-  <p class="component-description">Call <code>$.router.loadPage(url)</code> to load an Ajax Page or an Inline Page.</p>
+  <p class="component-description">使用 <code>$.router.loadPage(url)</code> 加载 Ajax Page 或 Inline Page.</p>
 {% highlight js %}
 $.router.loadPage("/detail");  //load ajax page
 $.router.loadPage("#about");  //load inline page
 {% endhighlight %}
 
-  <p>You can call <code>$.router.loadPage</code> with a config object like this:</p>
+  <p>配置加载 <code>$.router.loadPage</code>:</p>
 {% highlight js %}
 $.router.loadPage({
   url: "/detail",
@@ -114,19 +107,19 @@ $.router.loadPage({
 
   <table>
     <tr>
-      <th>Param</th>
-      <th>Default</th>
-      <th>Description</th>
+      <th>参数</th>
+      <th>默认</th>
+      <th>描述</th>
     </tr>
     <tr>
       <td>url</td>
       <td>undefined</td>
-      <td>url to load</td>
+      <td>根据链接加载</td>
     </tr>
     <tr>
       <td>noAnimation</td>
       <td>false</td>
-      <td>Load new page with animation</td>
+      <td>是否开启动画</td>
     </tr>
     <tr>
       <td>replace</td>
