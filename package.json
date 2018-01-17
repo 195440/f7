@@ -21,8 +21,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "grunt test",
-    "start": "jekyll serve --watch"
+    "build": "grunt test",
+    "dev": "jekyll serve --watch"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
