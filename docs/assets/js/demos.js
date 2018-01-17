@@ -113,6 +113,27 @@ $(function () {
     $(page).on('click','.pb-standalone-captions',function () {
       myPhotoBrowserCaptions.open();
     });
+    /*=== 有视频 ===*/
+    var myPhotoBrowserVideo = $.photoBrowser({
+      photos : [
+          {
+              html: '<iframe src="//www.youtube.com/embed/lmc21V-zBq0?list=PLpj0FBQgLGEr3mtZ5BTwtmSwF1dkPrPRM" frameborder="0" allowfullscreen></iframe>',
+              caption: 'Woodkid - Run Boy Run (Official HD Video)'
+          },
+          {
+              url: 'http://lorempixel.com/1024/1024/sports/2/',
+              caption: 'Second Caption Text'
+          },
+          {
+              url: 'http://lorempixel.com/1024/1024/sports/3/',
+          },
+      ],
+      theme: 'dark',
+      type: 'standalone'
+    });
+    $(document).on('click','.pb-standalone-video',function () {
+      myPhotoBrowserVideo.open();
+    });
   });
   
 

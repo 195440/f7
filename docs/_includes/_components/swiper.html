@@ -1,26 +1,56 @@
-<article class="component active" id="swiper" data-url='swiper'>
-  <h2 class="component-title">Swiper</h2>
-  <p class="component-description">You must include these to file after <code>f7.js</code> and <code>f7.css</code> to use Swiper:</p>
+<article class="component active" id="swiper">
+  <h2 class="component-title">轮播</h2>
+  <p class="component-description">使用轮播组件，你需要在 <code>f7.js</code> 和 <code>f7.css</code> 之后额外引入如下两个文件:</p>
 
 
 {% highlight html %}
 <link rel="stylesheet" href="css/f7-swiper.min.css">
-<script type='text/javascript' src='{{ site.version }}/js/f7-swiper.min.js' charset='utf-8'></script>
+<script type="text/javascript" src="js/f7-swiper.min.js" charset="utf-8"></script>
 {% endhighlight %}
 
-<p>The swiper will auto be init when <code>$.init</code> is called. If you create a Swiper after that, call <code>$(".swiper-container").swiper(config)</code> to init.</p>
+  <p>轮播会在你页面入口执行<code>$.init()</code>后自动初始化。否则，或者你的轮播是页面加载后异步加载的,那么需要手动初始化：<code>$(".swiper-container").swiper(config)</code></p>
+  <div class="component-example component-example-fullbleed">
+    <header class="bar bar-nav">
+      <h1 class="title">轮播</h1>
+    </header>
+    <div class="content">
+      <!-- Slider -->
+      <div class="swiper-container" data-space-between="10" data-autoplay="3000" data-pagination=".swiper-pagination">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
 
 {% highlight html %}
-<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+<div class="content">
+  <!-- Slider -->
+  <div class="swiper-container" data-space-between="10" data-autoplay="3000" data-pagination=".swiper-pagination">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
 {% endhighlight %}
+
+
+<h3>手动初始化轮播的详细配置</h3>
+
+{% highlight js %}
+$(function() {
+  $('.swiper-container').swiper(config);
+});
+{% endhighlight %}
+
+<p>可以在 <code>.swiper-container</code> 容器上通过 <code>data-xxx</code> 的形式配置，也可以在初始化的时候传入一个JS对象来配置。<br>
+可用配置项和暴露的方法请参考这里： <a href="http://3.swiper.com.cn/" target="_blank">swiper 官方文档</a></p>
+
+<p>额外的，提供一个方法<code>$.reinitSwiper(pageid)</code>.重新更新轮播
 </article>
-
-  <h3>Config</h3>
-
-  <p>You can add <code>data-xxx</code> on <code>.swiper-container</code> to config it, also, you can pass a config object in <code>$().swiper(config)</code>, For more config See <a href='http://www.idangero.us/swiper/api/#.VjtIEK4rLyU' target="_blank">Swiper</a></p>
