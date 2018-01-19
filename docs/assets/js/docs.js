@@ -148,7 +148,7 @@
 
     var top;
     if ((device.initialTop - currentTop) <= device.dockingOffset) {
-      top = device.dockingOffset;
+      top = device.dockingOffset + 50;
       device[0].className = 'device device-fixed';
       device.css({ top: top });
     } else {
@@ -157,7 +157,7 @@
     }
 
     if ((menu.initialTop - currentTop) <= 30) {
-      top = 30;
+      top = 30 + 50;
       menu[0].className = 'docs-side-menu menu-fixed';
       menu.css({ top: top });
     } else {

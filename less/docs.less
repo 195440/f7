@@ -2,7 +2,7 @@
 @import "mixins.less";
 
 // 文档全局颜色
-@doc-primary-color: #348fe2;
+@doc-primary-color: #31383E;
 
 // Clearfix mixin for docs
 
@@ -42,6 +42,7 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
   overflow: auto;
+  padding-top: 50px;
 }
 
 // Typography
@@ -92,15 +93,16 @@ body {
 .docs-header {
   position: relative;
   background-color: @doc-primary-color;
-  background-image: url(../img/homelines.png) ;
+  /*background-image: url(../img/homelines.png) ;*/
   background-repeat: no-repeat;
   background-position: 50% 40%;
-  background-image: linear-gradient(135deg, #348fe2 0%, #3aaf9f 100%);
+  /*background-image: linear-gradient(135deg, #348fe2 0%, #3aaf9f 100%);*/
 }
 .docs-sub-header {
   position: relative;
   //background: url(../img/homelines.png) @doc-primary-color no-repeat center top;
-  background-image: linear-gradient(135deg, #348fe2 0%, #3aaf9f 100%);
+  /*background-image: linear-gradient(135deg, #348fe2 0%, #3aaf9f 100%);*/
+  background-color: @doc-primary-color;
 }
 .docs-header {
   height: 380px;
@@ -150,11 +152,13 @@ body {
 
 // Masthead and nav
 .docs-masthead {
-  position: relative;
+  position: fixed;
+  top:0px;
+  z-index: 100;
+  width:100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-
+  background: #282E32;
   .container {
     height: 1rem;
   }
@@ -213,7 +217,7 @@ body {
 .docs-nav-item {
   color: #fff;
   transition: opacity .2s linear;
-  text-shadow: 2px 2px 2px #555;
+  text-shadow: 2px 2px 2px #222;
   &:active,
   &:focus {
     color: #fff;
@@ -371,13 +375,13 @@ body {
   font-weight: 300;
   line-height: 38px;
   color: #fff;
-  text-shadow: 3px 3px 3px #555;
+  text-shadow: 3px 3px 3px #222;
 }
 
 // Desktop header content
 @media screen and (min-width: 768px) {
   .docs-header-content {
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
 
     .btn {
