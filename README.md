@@ -15,7 +15,7 @@ CentOS&nbsp; 自带的 Ruby 版本太低，因此需要使用 rvm 安装较新�
 
 rvm：Ruby Version Manager
 
-<pre class="">`<code class="hljs avrasm has-numbering nginx"><span class="hljs-attribute"><span class="hljs-attribute">gpg</span></span> --keyserver hkp://keys<span class="hljs-preprocessor">.gnupg</span><span class="hljs-preprocessor">.net</span> --recv-keys <span class="hljs-number">409</span>B6B1796C275462A1703113804BB82D39DC0E3
+<pre class=""><code class="hljs avrasm has-numbering nginx"><span class="hljs-attribute"><span class="hljs-attribute">gpg</span></span> --keyserver hkp://keys<span class="hljs-preprocessor">.gnupg</span><span class="hljs-preprocessor">.net</span> --recv-keys <span class="hljs-number">409</span>B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get<span class="hljs-preprocessor">.rvm</span><span class="hljs-preprocessor">.io</span> | bash -s stable
 source /etc/profile<span class="hljs-preprocessor">.d</span>/rvm<span class="hljs-preprocessor">.sh</span>`</code></pre>
 
