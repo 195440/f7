@@ -58,7 +58,7 @@ gem sources -a http:<span class="hljs-comment"><span class="hljs-comment">//mirr
 
 运行下面的命令测试 Jekyll 能否正常工作:
 
-<pre class="">`<code class="hljs livecodeserver has-numbering css"><span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-built_in"><span class="hljs-selector-tag"><span class="hljs-selector-tag">new</span></span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
+<pre class=""><code class="hljs livecodeserver has-numbering css"><span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-built_in"><span class="hljs-selector-tag"><span class="hljs-selector-tag">new</span></span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
 <span class="hljs-selector-tag"><span class="hljs-selector-tag">cd</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
 <span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">serve</span></span> <span class="hljs-comment"><span class="hljs-selector-tag"><span class="hljs-selector-tag">--host</span></span> 0<span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span></span>`</code></pre>
 
@@ -140,7 +140,7 @@ gem install jekyll
 
 运行下面的命令测试 Jekyll 能否正常工作:
 
-<pre class="">`<code class="hljs livecodeserver has-numbering css"><span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-built_in"><span class="hljs-selector-tag"><span class="hljs-selector-tag">new</span></span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
+<pre class=""><code class="hljs livecodeserver has-numbering css"><span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-built_in"><span class="hljs-selector-tag"><span class="hljs-selector-tag">new</span></span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
 <span class="hljs-selector-tag"><span class="hljs-selector-tag">cd</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">blog</span></span>
 <span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">serve</span></span> <span class="hljs-comment"><span class="hljs-selector-tag"><span class="hljs-selector-tag">--host</span></span> 0<span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span></span>`</code></pre>
 
