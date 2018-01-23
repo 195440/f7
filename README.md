@@ -1,3 +1,14 @@
+# 项目启动
+
+### 开发模式运行
+
+    npm run start
+
+### 生成模式打包
+
+    npm run build
+
+
 # 本例基于 Jekyll 搭建
 
 # 简介
