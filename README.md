@@ -65,21 +65,6 @@ gem sources -a http:<span class="hljs-comment"><span class="hljs-comment">//mirr
 
 # Windows 安装 Jekyll
 
-<div class="entry-meta aftertitle-meta">
-<span class="author vcard" itemscope="" itemtype="http://schema.org/Person" itemprop="author">![洛城风起](http://www.195440.com/wp-content/uploads/2016/02/hdImg_b534734694904fe7d50366058984833514534664190-150x150.jpg)_Posted by _[
-_洛城风起_
-](http://www.195440.com/?author=1 "View all posts by 洛城风起") _on_</span>
-<span class="onDate date">
-
-<time class="published" datetime="2018-01-23T12:42:38+00:00" itemprop="datePublished">
-2018年1月23日 </time>
-<time class="updated" datetime="2018-01-23T12:50:50+00:00" itemprop="dateModified">2018年1月23日</time>
-</span>
-<span class="bl_categ">
- [笔记](http://www.195440.com/?cat=8)</span> </div>
-</header>
-<div class="entry-content" itemprop="articleBody">
-
 # 简介
 
 Jekyll 是用 Ruby 开发的静态网站框架，十分流行。
@@ -149,7 +134,3 @@ gem install jekyll
 <span class="hljs-selector-tag"><span class="hljs-selector-tag">jekyll</span></span> <span class="hljs-selector-tag"><span class="hljs-selector-tag">serve</span></span> <span class="hljs-comment"><span class="hljs-selector-tag"><span class="hljs-selector-tag">--host</span></span> 0<span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span><span class="hljs-selector-class"><span class="hljs-selector-class">.0</span></span></span>`</code></pre>
 
 然后在浏览器中打开 http://IP:4000，即可看到 Jekyll 默认页面。
-
-</div>
-</div>
-</article>
